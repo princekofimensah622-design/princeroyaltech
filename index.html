@@ -1,0 +1,883 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Prince Royal Tech Ghana | Website Design & Technology Services</title>
+
+<meta name="description" content="Prince Royal Tech provides website design, web development, business technology solutions and educational technology guides in Ghana. Based in Obuasi. Contact 0597882757.">
+
+<meta name="google-adsense-account" content="ca-pub-1317195887460428">
+
+<link rel="canonical" href="https://princeroyaltech.com/">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f8fafc;
+  color: #1e293b;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.nav {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-inner {
+  max-width: 1150px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  color: #2563eb;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-block;
+  background: #2563eb;
+  color: white !important;
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.btn-orange {
+  background: #f68b1e;
+}
+
+.hero {
+  background: linear-gradient(135deg,#eff6ff,#ffffff);
+  padding: 65px 0;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.badge {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 7px 13px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: 43px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+h1 span {
+  color: #2563eb;
+}
+
+.hero p {
+  color: #64748b;
+  margin: 18px 0;
+  max-width: 700px;
+}
+
+.cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.section {
+  padding: 45px 0;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.section-desc {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 23px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.card .link {
+  display: inline-block;
+  margin-top: 14px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.pricing {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 22px;
+}
+
+.pricing h3 {
+  margin-bottom: 8px;
+}
+
+.pricing h4 {
+  font-size: 25px;
+  color: #2563eb;
+  margin: 12px 0;
+}
+
+.pricing p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.note {
+  background: #eff6ff;
+  border-left: 4px solid #2563eb;
+  padding: 17px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+.shop-section {
+  background: #eff6ff;
+  border-radius: 18px;
+  padding: 30px;
+}
+
+.shop-section p {
+  color: #475569;
+  margin: 12px 0;
+}
+
+.blog-card {
+  background: white;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.blog-card h3 {
+  margin-bottom: 8px;
+}
+
+footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 35px 20px;
+  margin-top: 40px;
+}
+
+.footer-inner {
+  max-width: 1150px;
+  margin: auto;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+  margin: 20px 0;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+footer p {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+@media(max-width:800px) {
+  .nav-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .menu {
+    gap: 12px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .hero {
+    padding: 45px 0;
+  }
+
+  .section {
+    padding: 32px 0;
+  }
+}
+
+@media(max-width:420px) {
+  .menu a {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header class="nav">
+  <div class="nav-inner">
+
+    <a href="/" class="logo">
+      PRINCE ROYAL TECH
+    </a>
+
+    <nav class="menu">
+      <a href="/">Home</a>
+      <a href="/services/">Services</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+      <a href="/shop.html">Shop</a>
+      <a href="/contact/">Contact</a>
+      <a class="btn" href="https://wa.me/233597882757">
+        WhatsApp Us
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Prince Royal Tech Ghana | Website Design & Technology Services</title>
+
+<meta name="description" content="Prince Royal Tech provides website design, web development, business technology solutions and educational technology guides in Ghana. Based in Obuasi. Contact 0597882757.">
+
+<meta name="google-adsense-account" content="ca-pub-1317195887460428">
+
+<link rel="canonical" href="https://princeroyaltech.com/">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f8fafc;
+  color: #1e293b;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.nav {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-inner {
+  max-width: 1150px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  color: #2563eb;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-block;
+  background: #2563eb;
+  color: white !important;
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.btn-orange {
+  background: #f68b1e;
+}
+
+.hero {
+  background: linear-gradient(135deg,#eff6ff,#ffffff);
+  padding: 65px 0;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.badge {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 7px 13px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: 43px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+h1 span {
+  color: #2563eb;
+}
+
+.hero p {
+  color: #64748b;
+  margin: 18px 0;
+  max-width: 700px;
+}
+
+.cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.section {
+  padding: 45px 0;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.section-desc {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 23px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.card .link {
+  display: inline-block;
+  margin-top: 14px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.pricing {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 22px;
+}
+
+.pricing h3 {
+  margin-bottom: 8px;
+}
+
+.pricing h4 {
+  font-size: 25px;
+  color: #2563eb;
+  margin: 12px 0;
+}
+
+.pricing p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.note {
+  background: #eff6ff;
+  border-left: 4px solid #2563eb;
+  padding: 17px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+.shop-section {
+  background: #eff6ff;
+  border-radius: 18px;
+  padding: 30px;
+}
+
+.shop-section p {
+  color: #475569;
+  margin: 12px 0;
+}
+
+.blog-card {
+  background: white;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.blog-card h3 {
+  margin-bottom: 8px;
+}
+
+footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 35px 20px;
+  margin-top: 40px;
+}
+
+.footer-inner {
+  max-width: 1150px;
+  margin: auto;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+  margin: 20px 0;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+footer p {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+@media(max-width:800px) {
+  .nav-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .menu {
+    gap: 12px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .hero {
+    padding: 45px 0;
+  }
+
+  .section {
+    padding: 32px 0;
+  }
+}
+
+@media(max-width:420px) {
+  .menu a {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header class="nav">
+  <div class="nav-inner">
+
+    <a href="/" class="logo">
+      PRINCE ROYAL TECH
+    </a>
+
+    <nav class="menu">
+      <a href="/">Home</a>
+      <a href="/services/">Services</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+      <a href="/shop.html">Shop</a>
+      <a href="/contact/">Contact</a>
+      <a class="btn" href="https://wa.me/233597882757">
+        WhatsApp Us
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- WEBSITE DESIGN PRICING -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">
+      Website Design Packages
+    </h2>
+
+    <p class="section-desc">
+      The following prices are indicative starting
+      prices. The final cost depends on your
+      project requirements and agreed features.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Starter Website</h3>
+        <p class="price">GH₵800</p>
+
+        <ul>
+          <li>Basic business website</li>
+          <li>Mobile-friendly layout</li>
+          <li>Contact information</li>
+          <li>Basic navigation</li>
+        </ul>
+
+        <a class="btn"
+           href="https://wa.me/233597882757?text=I%20am%20interested%20in%20the%20Starter%20Website%20package.">
+          Request Details
+        </a>
+      </div>
+
+      <div class="card">
+        <h3>Business Website</h3>
+        <p class="price">GH₵1,500</p>
+
+        <ul>
+          <li>Business website pages</li>
+          <li>Responsive design</li>
+          <li>Service information</li>
+          <li>Contact and enquiry options</li>
+        </ul>
+
+        <a class="btn"
+           href="https://wa.me/233597882757?text=I%20am%20interested%20in%20the%20Business%20Website%20package.">
+          Request Details
+        </a>
+      </div>
+
+      <div class="card">
+        <h3>E-commerce Website</h3>
+        <p class="price">GH₵2,800</p>
+
+        <ul>
+          <li>Online product catalogue</li>
+          <li>Shopping cart features</li>
+          <li>Order enquiry options</li>
+          <li>Payment integration assessment</li>
+        </ul>
+
+        <a class="btn"
+           href="https://wa.me/233597882757?text=I%20am%20interested%20in%20the%20E-commerce%20Website%20package.">
+          Request Details
+        </a>
+      </div>
+    </div>
+
+    <p style="margin-top:20px">
+      Prices are starting estimates, not guaranteed
+      quotations. Domain registration, hosting,
+      paid services, payment provider charges and
+      additional features may affect the final cost.
+      Contact us for a project assessment.
+    </p>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">
+      Technology Tips and Business Guides
+    </h2>
+
+    <p class="section-desc">
+      Visit our blog for practical information
+      about websites, technology, online business
+      and digital services in Ghana.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Website and Web Development</h3>
+        <p>
+          Learn about website planning, website
+          features, hosting and the basics of
+          building an online presence.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Digital Business in Ghana</h3>
+        <p>
+          Explore educational guides about online
+          business, digital payments and technology
+          for small businesses.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Technology Learning</h3>
+        <p>
+          Read explanations and practical guides
+          designed to help readers understand
+          common technology topics.
+        </p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:25px">
+      <a class="btn" href="/blog/">
+        Visit Our Blog
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- JUMIA AFFILIATE SHOP -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">
+      Explore Recommended Technology Products
+    </h2>
+
+    <p class="section-desc">
+      Looking for phones, electronics and other
+      technology products? Explore selected
+      products through our Jumia affiliate link.
+    </p>
+
+    <div class="card">
+      <h3>Technology Product Recommendations</h3>
+
+      <p>
+        PRINCE ROYAL TECH participates in the
+        Jumia JForce affiliate programme. We may
+        earn a commission when you make a qualifying
+        purchase through our affiliate links, at no
+        additional cost to you.
+      </p>
+
+      <p>
+        Products are purchased through Jumia and
+        fulfilled according to Jumia's and the
+        relevant seller's terms. PRINCE ROYAL TECH
+        does not claim to own or stock these products.
+      </p>
+
+      <a class="btn" href="/shop.html">
+        Explore Products
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">
+      Contact PRINCE ROYAL TECH
+    </h2>
+
+    <p class="section-desc">
+      Have a website project or need help with a
+      digital technology solution? Contact us to
+      discuss your requirements.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>WhatsApp</h3>
+        <p>0597882757</p>
+        <a class="btn"
+           href="https://wa.me/233597882757">
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      <div class="card">
+        <h3>Location</h3>
+        <p>
+          Based in Obuasi, Ashanti Region, Ghana.
+          Serving customers across Ghana.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Contact Page</h3>
+        <p>
+          Visit our contact page for more
+          information about reaching us.
+        </p>
+        <a class="btn" href="/contact/">
+          Visit Contact Page
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <h3>PRINCE ROYAL TECH</h3>
+
+    <p>
+      Website design, web development and
+      digital technology solutions in Ghana.
+    </p>
+
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/services/">Services</a>
+      <a href="/blog/">Blog</a>
+      <a href="/shop.html">Shop</a>
+      <a href="/contact/">Contact</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+    </div>
+
+    <p>
+      WhatsApp: 0597882757
+    </p>
+
+    <p>
+      &copy; 2026 PRINCE ROYAL TECH.
+      All rights reserved.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
